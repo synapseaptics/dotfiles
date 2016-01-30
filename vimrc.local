@@ -1,0 +1,28 @@
+"" J8 Default Vim Conf ###
+
+"" Basic Settings
+syntax on
+"" Default Sets
+set number
+syntax on
+set ts=4
+set expandtab
+set shiftwidth=4
+set cursorline
+set showmatch
+let python_highlight_all = 1
+
+
+
+"" Color Scheme Selection
+autocmd BufEnter * colorscheme default
+autocmd BufEnter *.php colorscheme Tomorrow-Night
+autocmd BufEnter *.py colorscheme badwolf
+
+""## Pluguns
+
+"" Nerd Tree
+map <C-n> :NERDTreeToggle<CR>
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
